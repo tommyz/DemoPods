@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DemoPods'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DemoPods.'
+  s.summary          = 'A short of DemoPods.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: 測試做一個私人的DemoPods 然後給別人pod.
                        DESC
 
   s.homepage         = 'https://github.com/tommyz/DemoPods'
@@ -28,15 +28,22 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/tommyz/DemoPods.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '9.0'
+  s.requires_arc = true
   s.source_files = 'DemoPods/Classes/**/*'
   
   # s.resource_bundles = {
   #   'DemoPods' => ['DemoPods/Assets/*.png']
   # }
+   s.resource_bundles = {
+     'DemoPods' => ['DemoPods/Assets/*.xcassets']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'DemoPods/Classes/Public/*.h'
+  s.frameworks = 'MobileCoreServices', 'SystemConfiguration', 'UIKit'
+  s.dependency 'AFNetworking'
+  s.dependency 'Masonry', '~> 1.1.0'
 end
