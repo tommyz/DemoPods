@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DemoPods'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short of DemoPods.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,8 @@ TODO: 測試做一個私人的DemoPods 然後給別人pod.
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.source_files = 'DemoPods/Classes/**/*'
-  
+#  s.static_framework = true
+#  s.ios.vendored_frameworks = 'ios/DemoPods.framework'
   # s.resource_bundles = {
   #   'DemoPods' => ['DemoPods/Assets/*.png']
   # }
